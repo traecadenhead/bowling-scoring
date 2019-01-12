@@ -1,0 +1,79 @@
+[
+    {
+        "rolls": [
+            10
+        ],
+        "frame_score": 20,
+        "frame_total": 20
+    },
+    {
+        "rolls": [
+            7,
+            3
+        ],
+        "frame_score": 19,
+        "frame_total": 39
+    },
+    {
+        "rolls": [
+            9,
+            0
+        ],
+        "frame_score": 9,
+        "frame_total": 48
+    },
+    {
+        "rolls": [
+            10
+        ],
+        "frame_score": 18,
+        "frame_total": 66
+    },
+    {
+        "rolls": [
+            0,
+            8
+        ],
+        "frame_score": 8,
+        "frame_total": 74
+    },
+    {
+        "rolls": [
+            8,
+            2
+        ],
+        "frame_score": 10,
+        "frame_total": 84
+    },
+    {
+        "rolls": [
+            0,
+            6
+        ],
+        "frame_score": 6,
+        "frame_total": 90
+    },
+    {
+        "rolls": [
+            10
+        ],
+        "frame_score": 30,
+        "frame_total": 120
+    },
+    {
+        "rolls": [
+            10
+        ],
+        "frame_score": 28,
+        "frame_total": 148
+    },
+    {
+        "rolls": [
+            10,
+            8,
+            1
+        ],
+        "frame_score": 19,
+        "frame_total": 167
+    }
+]

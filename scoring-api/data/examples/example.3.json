@@ -1,0 +1,25 @@
+[
+    {
+        "rolls": [
+            10
+        ],
+        "frame_score": 20,
+        "frame_total": 20
+    },
+    {
+        "rolls": [
+            7,
+            3
+        ],
+        "frame_score": 19,
+        "frame_total": 39
+    },
+    {
+        "rolls": [
+            9,
+            0
+        ],
+        "frame_score": 9,
+        "frame_total": 48
+    }
+]

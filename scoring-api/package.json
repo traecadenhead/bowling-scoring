@@ -2,12 +2,13 @@
   "name": "scoring-api",
   "version": "1.0.0",
   "description": "An API for scoring a game of bowling",
-  "main": "api.js",
+  "main": "app/server.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node app/server.js"
   },
   "author": "Trae Cadenhead",
   "license": "ISC",

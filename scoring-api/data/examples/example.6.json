@@ -1,0 +1,48 @@
+[
+    {
+        "rolls": [
+            10
+        ],
+        "frame_score": 20,
+        "frame_total": 20
+    },
+    {
+        "rolls": [
+            7,
+            3
+        ],
+        "frame_score": 19,
+        "frame_total": 39
+    },
+    {
+        "rolls": [
+            9,
+            0
+        ],
+        "frame_score": 9,
+        "frame_total": 48
+    },
+    {
+        "rolls": [
+            10
+        ],
+        "frame_score": 18,
+        "frame_total": 66
+    },
+    {
+        "rolls": [
+            0,
+            8
+        ],
+        "frame_score": 8,
+        "frame_total": 74
+    },
+    {
+        "rolls": [
+            8,
+            2
+        ],
+        "frame_score": null,
+        "frame_total": null
+    }
+]
