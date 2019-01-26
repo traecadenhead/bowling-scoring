@@ -12,3 +12,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card{
+  width: 150px;
+  float: left;
+  margin: 10px;
+  height: 150px;
+}
+
+.card-title{
+  margin-bottom: .75rem;
+  border-bottom: solid 1px;
+}
+
+.rolls{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  float: right;
+}
+
+.rolls div{
+  padding: 5px;
+  border: solid 1px #cccccc;
+}

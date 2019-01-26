@@ -3,6 +3,19 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 export default class Frame extends Component{
 
+    display_roll(number, index){
+        if(number === 10){
+            return "X";
+        }
+        else if (this.props.frame.frame_result === "spare" && index > 0){
+            return "/";
+        }
+        else if (number === 0){
+            return "-";
+        }
+        return number;
+    }
+
     render(){
         let total = null;
         if(this.props.frame.frame_total != null){
@@ -12,10 +25,12 @@ export default class Frame extends Component{
         return (
             <Card>
                 <CardBody>
-                    <CardTitle>Frame {this.props.frame.frame_number}</CardTitle>
-                    {this.props.frame.rolls.map((number, index) => {
-                        return <CardSubtitle key={index}>{number}</CardSubtitle>;
-                    })}
+                    <CardTitle>{this.props.frame.frame_number}</CardTitle>
+                    <div className="rolls">
+                        {this.props.frame.rolls.map((number, index) => {
+                            return <div key={index}>{this.display_roll(number, index)}</div>;
+                        })}
+                    </div>
                     {total}
                 </CardBody>
             </Card>
