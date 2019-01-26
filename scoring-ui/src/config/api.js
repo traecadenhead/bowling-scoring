@@ -20,7 +20,7 @@ export default class api {
 
     static get_game = () => {
         return new Promise(function(resolve, reject){
-            api.make_api_request(`game/${storage.get_game_id()}`).then(function(response){
+            api.make_api_request("game/" + storage.get_game_id()).then(function(response){
                 if(response.success){
                     resolve(response.data);
                 }

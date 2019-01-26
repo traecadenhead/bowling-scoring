@@ -5,6 +5,6 @@ export default class storage {
     }
 
     static get_game_id = () => {
-        localStorage.getItem("game_id");
+        return localStorage.getItem("game_id");
     }
 }

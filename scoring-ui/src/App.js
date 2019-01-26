@@ -1,43 +1,59 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Button, Alert } from 'reactstrap';
-import app_state from './config/app_state';
 import api from './config/api';
+import Start from './components/Start';
+import Game from './components/Game';
+import Message from './components/Message';
 
 class App extends Component {
 
   constructor(props){
     super(props); 
-    this.state = app_state.get_initial_state();
+    this.state = {
+      game: null,
+      message: null
+    }
   }
 
   start_game() {
-    api.start_game((message) => {
+    api.start_game().then((message) => {
+      this.update_game_state(message);
+    });
+  }
+
+  roll(value){
+    let roll_score = parseInt(value);
+    api.score_roll(roll_score).then((message) => {
+      this.update_game_state(message);
+    });
+  }
+
+  update_game_state(message){
+    this.setState({
+      message
+    });
+    api.get_game().then((game) => {
       this.setState({
-        message
-      });
+        game
+      })
+    }, (e) => {
+      this.setState({
+        message: e
+      })
     });
   }
 
   render() {
-    let message = null;
-    if (this.state.message != null){
-      message = (
-        <Alert color="primary">{this.state.message}</Alert>
-      )
-    }
-    let game_screen = (
-      <Button color="success" onClick={this.start_game}>Start the Game!</Button>
-    )
+    let game_screen = null;
     if (this.state.game != null){
-      game_screen = (
-        <div>Game has started</div>
-      )
+      game_screen = <Game game={this.state.game} roll={this.roll.bind(this)}/>;
+    }
+    else{
+      game_screen = <Start start_game={this.start_game.bind(this)}/>;
     }
     return (
       <div className="App">
-        {message}
+        <Message message={this.state.message}/>
         {game_screen}
       </div>
     );
