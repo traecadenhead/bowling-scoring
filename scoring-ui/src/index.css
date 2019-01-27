@@ -13,16 +13,47 @@ code {
     monospace;
 }
 
-.card{
+.new-start{
+  position: relative;
+  top: 30px;
+  display: block;
+}
+
+.start{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30%;
+  width: 50%;
+  margin: -15% 0 0 -25%;
+}
+
+.start .btn-success, .new-start .btn-success{
+  font-size: 20pt;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.roller{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.frames .card{
   width: 150px;
   float: left;
   margin: 10px;
-  height: 150px;
+  height: 95px;
 }
 
-.card-title{
+.frames .card-body{
+  padding: 0px 0px;
+}
+
+.frames .card-title{
   margin-bottom: .75rem;
   border-bottom: solid 1px;
+  font-size: 16pt;
 }
 
 .rolls{
@@ -30,6 +61,7 @@ code {
   display: flex;
   flex-direction: row;
   float: right;
+  margin-right: 10px;
 }
 
 .rolls div{

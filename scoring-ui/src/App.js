@@ -22,9 +22,16 @@ class App extends Component {
   }
 
   roll(value){
+    this.setState({
+      message: null
+    });
     let roll_score = parseInt(value);
     api.score_roll(roll_score).then((message) => {
-      this.update_game_state(message);
+      let show_message = null;
+      if (message != "Roll was scored"){
+        show_message = message;
+      }
+      this.update_game_state(show_message);
     });
   }
 
@@ -35,7 +42,12 @@ class App extends Component {
     api.get_game().then((game) => {
       this.setState({
         game
-      })
+      });
+      if(game.status == "complete"){
+        this.setState({
+          message: "The game is complete!"
+        });
+      }
     }, (e) => {
       this.setState({
         message: e
@@ -46,10 +58,12 @@ class App extends Component {
   render() {
     let game_screen = null;
     if (this.state.game != null){
-      game_screen = <Game game={this.state.game} roll={this.roll.bind(this)}/>;
+      game_screen = <Game game={this.state.game} roll={this.roll.bind(this)} start_game={this.start_game.bind(this)}/>;
     }
     else{
-      game_screen = <Start start_game={this.start_game.bind(this)}/>;
+      game_screen = <div className="start">
+        <Start start_game={this.start_game.bind(this)} game_desc={"the"}/>
+      </div>;
     }
     return (
       <div className="App">
