@@ -18,6 +18,10 @@ class App extends Component {
   start_game() {
     api.start_game().then((message) => {
       this.update_game_state(message);
+    }, (e) => {
+      this.setState({
+        message: e
+      })
     });
   }
 
@@ -32,6 +36,10 @@ class App extends Component {
         show_message = message;
       }
       this.update_game_state(show_message);
+    }, (e) => {
+      this.setState({
+        message: e
+      })
     });
   }
 
