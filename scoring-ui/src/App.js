@@ -28,7 +28,7 @@ class App extends Component {
     let roll_score = parseInt(value);
     api.score_roll(roll_score).then((message) => {
       let show_message = null;
-      if (message != "Roll was scored"){
+      if (message !== "Roll was scored"){
         show_message = message;
       }
       this.update_game_state(show_message);
@@ -43,7 +43,7 @@ class App extends Component {
       this.setState({
         game
       });
-      if(game.status == "complete"){
+      if(game.status === "complete"){
         this.setState({
           message: "The game is complete!"
         });

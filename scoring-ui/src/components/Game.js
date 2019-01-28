@@ -11,7 +11,7 @@ export default class Game extends Component{
             roller = <Roller max_next_roll_score={this.props.game.max_next_roll_score} roll={this.props.roll} />
         }
         let start_new = null;
-        if(this.props.game.status == "complete"){
+        if(this.props.game.status === "complete"){
             start_new = <div className="new-start">
                 <Start start_game={this.props.start_game} game_desc={"New"}/>
             </div>

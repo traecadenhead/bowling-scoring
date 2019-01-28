@@ -190,5 +190,3 @@ describe('test game functions', function(){
         //
     });  
 });
-
-// it should score a roll
